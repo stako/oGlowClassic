@@ -276,5 +276,5 @@ category.ID = frame.name
 
 SLASH_OGLOW_UI1 = '/oglow'
 SlashCmdList['OGLOW_UI'] = function()
-	InterfaceOptionsFrame_OpenToCategory'oGlowClassic'
+	Settings.OpenToCategory('oGlowClassic')
 end
