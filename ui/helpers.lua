@@ -98,7 +98,7 @@ end
 do
 	local OnClick = function(self, button, down)
 		self:GetParent():GetParent().colorPicker = self
-		OpenColorPicker(self)
+		ColorPickerFrame:SetupColorPickerAndShow(self)
 	end
 
 	ns.createColorSwatch = function(self)
