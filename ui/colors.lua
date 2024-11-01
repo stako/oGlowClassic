@@ -211,8 +211,6 @@ function frame:CreateOptions()
 	self:refresh()
 end
 
-local category, layout = Settings.RegisterCanvasLayoutCategory(frame, frame.name)
-
-Settings.RegisterAddOnCategory(category)
-
-category.ID = frame.name
+local category = Settings.GetCategory(frame.parent)
+local subcategory, layout = Settings.RegisterCanvasLayoutSubcategory(category, frame, frame.name, frame.name)
+subcategory.ID = frame.name
