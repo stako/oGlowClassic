@@ -82,7 +82,7 @@ function frame:CreateOptions()
 	end
 
 	local Swatch_Cancel = function()
-		Swatch_Update(box.colorPicker, true, ColorPicker_GetPreviousValues())
+		Swatch_Update(box.colorPicker, true, ColorPickerFrame:GetPreviousValues())
 	end
 
 	local Label_Update = function(self)
