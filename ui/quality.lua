@@ -71,11 +71,10 @@ function frame:CreateOptions()
 		thesDDown:SetScript('OnEnter', DropDown_OnEnter)
 		thesDDown:SetScript('OnLeave', DropDown_OnLeave)
 
-		function frame:refresh()
+		function frame:OnRefresh()
 			UIDropDownMenu_Initialize(thesDDown, DropDown_init)
 			UpdateSelected()
 		end
-		self:refresh()
 	end
 end
 

@@ -200,7 +200,7 @@ function frame:CreateOptions()
 	box.rows = rows
 	box:SetHeight(8 * 24 + 16)
 
-	function frame:refresh()
+	function frame:OnRefresh()
 		for i=0, 7 do
 			local r, g, b = unpack(colorTable[i])
 			local row = rows[i]
@@ -208,7 +208,6 @@ function frame:CreateOptions()
 			Swatch_Update(row.swatch, false, r, g, b)
 		end
 	end
-	self:refresh()
 end
 
 local category = Settings.GetCategory(frame.parent)

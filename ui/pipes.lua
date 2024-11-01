@@ -63,7 +63,7 @@ function frame:CreateOptions()
 	scroll:SetVerticalScroll(0)
 	scrollchild:SetPoint('TOP', 0, 0)
 
-	self:refresh()
+	self:OnRefresh()
 end
 
 do
@@ -179,7 +179,7 @@ do
 		return row
 	end
 
-	function frame:refresh()
+	function frame:OnRefresh()
 		local sChild = self.scrollchild
 		local filterFrame = self.filterFrame
 
