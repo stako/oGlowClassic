@@ -4,6 +4,8 @@ local oGlowClassic = ns.oGlowClassic
 local argcheck = oGlowClassic.argcheck
 local colorTable = ns.colorTable
 
+local altStyle = true
+
 local createBorder = function(self, point)
 	local bc = self.oGlowClassicBorder
 	if(not bc) then
@@ -13,12 +15,17 @@ local createBorder = function(self, point)
 			bc = self:CreateTexture(nil, "OVERLAY")
 		end
 
-		bc:SetTexture"Interface\\Buttons\\UI-ActionButton-Border"
-		bc:SetBlendMode"ADD"
-		bc:SetAlpha(.8)
+		if altStyle then
+			bc:SetTexture(651080)
+			bc:SetAllPoints()
+		else
+			bc:SetTexture"Interface\\Buttons\\UI-ActionButton-Border"
+			bc:SetBlendMode"ADD"
+			bc:SetAlpha(.8)
 
-		bc:SetWidth(70)
-		bc:SetHeight(70)
+			bc:SetWidth(70)
+			bc:SetHeight(70)
+		end
 
 		bc:SetPoint("CENTER", point or self)
 		self.oGlowClassicBorder = bc
